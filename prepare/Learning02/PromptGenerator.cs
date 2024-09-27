@@ -1,4 +1,4 @@
-publicclass promtGenerator
+public class promptGenerator
 {
     public List<string> _promts;
 
