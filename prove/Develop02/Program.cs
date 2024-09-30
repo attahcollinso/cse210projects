@@ -24,7 +24,7 @@ class Program
                     entry._promptText = PromptGenerator.GetRandomPrompt();
                     entry._date = theCurrentTime.ToShortDateString();
                     Console.WriteLine(entry._promptText);
-                    entry._entryTextl = Console.ReadLine();
+                    entry._entryText = Console.ReadLine();
                     journal.AddEntry(entry);
                     break;
                 case "2":
@@ -33,7 +33,7 @@ class Program
                     break;
                 case "3":
                     Console.WriteLine("Please enter filename");
-                    journal.ReadFromFile(Console.ReadLine());
+                    journal.LoadFromFile(Console.ReadLine());
                     break;
                 case "4":
                     Console.WriteLine("Please enter filename");

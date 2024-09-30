@@ -40,7 +40,7 @@ public class Journal
                 {
                     writer.WriteLine($"Date: {entry._date}");
                     writer.WriteLine($"Prompt: {entry._promptText}");
-                    writer.WriteLine($"Entry: {entry._entryTextl}");
+                    writer.WriteLine($"Entry: {entry._entryText}");
                     writer.WriteLine(); 
                 }
             }
@@ -66,7 +66,7 @@ public class Journal
             {
                 if (string.IsNullOrWhiteSpace(line))
                 {
-                    if (string.IsNullOrWhiteSpace(entry._date) || !string.IsNullOrWhiteSpace(entry._promptText) || !string.IsNullOrWhiteSpace(entry._entryTextl))
+                    if (string.IsNullOrWhiteSpace(entry._date) || !string.IsNullOrWhiteSpace(entry._promptText) || !string.IsNullOrWhiteSpace(entry._entryText))
                     {
                         AddEntry(entry);
                     }
@@ -85,14 +85,14 @@ public class Journal
                             entry._promptText = value;
                             break;
                         case 2:
-                            entry._entryTextl = value;
+                            entry._entryText = value;
                             break;
                     }
                     partIndex++;
                 }
             }
         
-            if (!string.IsNullOrWhiteSpace(entry._date) || !string.IsNullOrWhiteSpace(entry._promptText) || !string.IsNullOrWhiteSpace(entry._entryTextl))
+            if (!string.IsNullOrWhiteSpace(entry._date) || !string.IsNullOrWhiteSpace(entry._promptText) || !string.IsNullOrWhiteSpace(entry._entryText))
             {
                 AddEntry(entry);
             }

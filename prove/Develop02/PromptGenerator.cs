@@ -1,6 +1,7 @@
-public class promptGenerator
+public class PromptGenerator
 {
-    public List<string> _promts = new List<string>
+
+    public List<string> _promptText = new List<string>()
     {
         "Did you speak kindly to my children",
         "What was the best part of my day?",
@@ -19,6 +20,7 @@ public class promptGenerator
         "Is there anything you wish you had done differently today?",
         "What are your expectations for tomorrow?",
         "Write about a moment when you felt grateful today.",
+        "Where able to kkep to time? Why?"
         "Describe the trafic today and how it affected your journey.",
         "Did you share the gospel today?",
     };
@@ -26,7 +28,7 @@ public class promptGenerator
     public string GetRandomPrompt()
     {
         var random = new Random();
-        int index = random.Next(_prompts.Count);
-        return _prompts[index];
+        int index = random.Next(_promptText.Count);
+        return _promptText[index];
     }
 }
