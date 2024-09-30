@@ -2,19 +2,6 @@ public class Journal
 {
     public List<Entry> _entries;
 
-    public void AddEntry(Entry newEntry)
-    {
-        if (newEntry != null)
-        {
-            _entries = _entries ?? new List<Entry>();
-    
-            _entries.Add(newEntry);
-        }
-        else
-        {
-            Console.WriteLine("Invalid Entry: Entry cannot be null");
-        }
-    }
 
     public void DisplayAll()
     {
@@ -27,6 +14,20 @@ public class Journal
         else
         {
             Console.WriteLine("Journal is Empty");
+        }
+    }
+
+    public void AddEntry(Entry newEntry)
+    {
+        if (newEntry != null)
+        {
+            _entries = _entries ?? new List<Entry>();
+    
+            _entries.Add(newEntry);
+        }
+        else
+        {
+            Console.WriteLine("Invalid Entry: Entry cannot be null");
         }
     }
 
@@ -51,7 +52,7 @@ public class Journal
         }
     }
 
-    public void LoadFromFile(string file)
+    public void ReadFromFile(string file)
     {
        _entries = new List<Entry>();
     

@@ -33,7 +33,7 @@ class Program
                     break;
                 case "3":
                     Console.WriteLine("Please enter filename");
-                    journal.LoadFromFile(Console.ReadLine());
+                    journal.ReadFromFile(Console.ReadLine());
                     break;
                 case "4":
                     Console.WriteLine("Please enter filename");
