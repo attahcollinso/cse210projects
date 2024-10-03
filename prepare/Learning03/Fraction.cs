@@ -1,4 +1,3 @@
-
 public class Fraction
 { 
    private int _top;
