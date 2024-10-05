@@ -1,29 +1,38 @@
+﻿using System.Net.NetworkInformation;
+
 public class Word
 {
     private string _text;
     private bool _isHidden;
 
-    public Word(text:string)
+    public Word(string text)
     {
-
-    }
-    public Hide()
-    {
-
+        _text = text;
+        _isHidden = false;
     }
 
-    public Show()
+    public void Hide()
     {
-
+        _isHidden = true;
     }
 
-    public IsHidden(bool)
+    public void Show()
     {
-
+        _isHidden = false;
     }
 
-    publicGetDisplayText(string)
+    public bool IsHidden()
     {
+        return _isHidden;
+    }
 
+    public string GetDisplayText()
+    {
+        if (_isHidden)
+        {
+            return new string('_', _text.Length);
+        }
+
+        return _text;
     }
 }
