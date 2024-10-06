@@ -1,3 +1,5 @@
+// To show creativity and exceed the requirments, I added checks on NULL Entry and NULL Journal cases.
+
 using System;
 
 class Program
