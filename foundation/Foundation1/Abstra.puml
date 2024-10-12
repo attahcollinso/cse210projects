@@ -1,0 +1,20 @@
+
+@startuml
+'https://plantuml.com/class-diagram
+
+class Video {
+_title: string;
+_author: string;
+_lenght: int
+_comments: List<Comment>
+QunttyComments(): int
+DisplayAll(): void
+AddComment(Comment):void
+}
+class Comment {
+_userName: string
+_text: string
+DisplayComment() : void
+}
+
+@enduml
