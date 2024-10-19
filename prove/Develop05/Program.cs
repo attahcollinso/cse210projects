@@ -1,4 +1,4 @@
-// To show creativity and exceed requirement, I made the questions in the reflecting activity not to repeat untill all the questions have been taken.
+// To show creativity and exceed requirement, I made sure the random prompts/questions in the reflecting activity are selected until they have all been used at least once in that session.
 
 class Program
 {
