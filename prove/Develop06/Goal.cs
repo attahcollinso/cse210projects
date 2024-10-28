@@ -1,30 +1,29 @@
-
-Public abstract class Goal
+public abstract class Goal
 {
-    Protected string _shortName;
-    Protected string _description;
-    Public string _points;
+    protected string _shortName;
+    protected string _description;
+    public string _points;
 
-    Public Goal(string shortName, string description, string points)
+    public Goal(string shortName, string description, string points)
     {
         _shortName = shortName;
         _points = points;
         _description = description;
     }
 
-    Public abstract void RecordEvent();
-    Public abstract bool IsComplete();
-    Public abstract string GetStringRepresentation();
+    public abstract void RecordEvent();
+    public abstract bool IsComplete();
+    public abstract string GetStringRepresentation();
 
-    Public virtual string GetDetailsString()
+    public virtual string GetDetailsString()
     {
-        If (IsComplete())
+        if (IsComplete())
         {
-            Return $”[X] {_shortName} ({_description})”;
+            return $"[X] {_shortName} ({_description})";
         }
-        Else
+        else
         {
-            Return $”[ ] {_shortName} ({_description})”;
+            return $"[ ] {_shortName} ({_description})";
         }
     }
 }

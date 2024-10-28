@@ -1,34 +1,31 @@
-Public class User
+public class User
 {
-    Private string _name;
-    Public int _score;
-    Public User(string name, int score)
+    private string _name;
+    public int _score;
+    public User(string name, int score)
     {
         _name = name;
         _score = score;
     }
 
-    Public void Save()
+    public void Save()
     {
-        Using (var writer = new StreamWriter(_name + “.txt”))
+        using (var writer = new StreamWriter(_name + ".txt"))
         {
-            Writer.Write(_score);
+            writer.Write(_score);
         }
     }
 
-    Public void LoadFromFile()
+    public void LoadFromFile()
     {
-        Using (var reader = new StreamReader(_name + “.txt”))
+        using (var reader = new StreamReader(_name + ".txt"))
         {
             _score = int.Parse(reader.ReadToEnd());
         }
     }
-    Public bool IsNewUser()
+    public bool IsNewUser()
     {
         // check if file exists
-        Return !File.Exists(_name + “.txt”);
+        return !File.Exists(_name + ".txt");
     }
 }
-
-
-

@@ -1,13 +1,12 @@
 // To show creativity and exceed requirments, I added user class that keeps score in filesystem depending on username
 
-Using System;
+using System;
 
-Class Program
+class Program
 {
-    Static void Main(string[] args)
+    static void Main(string[] args)
     {
         GoalManager goalManager = new GoalManager();
         goalManager.Start();
     }
 }
-
