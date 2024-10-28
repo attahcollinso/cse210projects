@@ -1,4 +1,4 @@
-// For eceeding requirments I added user clas that keeps score in filesystem depending on username
+// To show creativity and exceed requirments, I added user class that keeps score in filesystem depending on username
 
 Using System;
 
