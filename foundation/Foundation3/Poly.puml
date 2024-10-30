@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Activity 
+{
+_date: string
+_lenght: int
+
+GetDistance(): float
+GetSpeed(metric): float
+GetPace(metric): float
+GetSummary(): string
+}
+
+class Running 
+{
+_distance: float
+GetSummary(): string
+GetSpeed(metric): float
+GetPace(metric): float
+}
+
+class Cycling 
+{
+_speed: float
+GetSummary(): string
+GetSpeed(metric): float
+GetPace(metric): float
+}
+
+class Swimming 
+{
+_numberLaps: int
+GetSummary(): string
+GetSpeed(metric): float
+GetPace(metric): float
+}
+
+Activity <|-- Running
+Activity <|-- Cycling
+Activity <|-- Swimming
+@enduml
